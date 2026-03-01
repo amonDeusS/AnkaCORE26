@@ -1,41 +1,42 @@
 # 🦅 Siber Güvenlik Mühendisliği Eğitimi - 2026
 
-> **"Sistemi bilmeyen hackleyemez; sadece bozabilir."**
+> **"Bir mühendisin kalitesi, bulduğu açıkla değil; süreci nasıl yönettiği ve raporladığıyla ölçülür."**
 
-Bu repo, Siber Güvenlik Mühendisliği eğitim programının ödev teslim ve kaynak yönetim merkezidir. Hafta 4'te sahanın en geniş ve en popüler alanına, **WEB DÜNYASINA** iniyoruz.
+Bu repo, AnkaCORE '26 eğitim programının **101 Aşaması Bitirme Projesi (Capstone Project)** teslim merkezidir. 5 haftalık zorlu temel eğitimin sonuna geldiniz. Bu proje, sadece araç kullanan "Turistler" ile sistemin bütününe hakim olan "Mühendisleri" birbirinden ayıracak olan final operasyonudur.
 
 ---
 
-## 📅 HAFTA 4: Hedefi Tanıma ve Mantık Hataları (Web Recon & IDOR)
+## 📅 101 BİTİRME PROJESİ: "The Analyst & The Hunter"
 
 | Parametre | Detay |
 | :--- | :--- |
-| **Durum** | 🟢 Aktif |
-| **Odak Konusu** | Web Keşfi (Recon), Burp Suite ve Yetki Atlatma (BAC) |
-| **Zorluk Seviyesi** | ⭐⭐⭐⭐ (4/5) |
-| **Son Teslim** | Cumartesi 23:59 |
+| **Durum** | 🔴 FİNAL OPERASYONU (201'e Geçiş Bileti) |
+| **Kapsam** | İşletim Sistemleri, Ağ Analizi, Web Exploit ve VDP Raporlama |
+| **Zorluk Seviyesi** | ⭐⭐⭐⭐⭐ (5/5) |
+| **Son Teslim** | 11 Mart Çarşamba 23:59 |
 
 ---
 
-### 🚀 Görev Özeti: "Web Pentest'in %60'ı Keşiftir"
+### 🚀 Görev Özeti: "Siber Uzayda Noktaları Birleştirmek"
 
-İşletim sistemleri ve ağ trafiğini geride bıraktık. Bu hafta amacımız; tarayıcıda gördüğümüz "süslü" web sitelerinin arkasındaki çıplak HTTP trafiğini manipüle etmektir. Bir web uygulamasına saldırmadan önce iki şeyi çok iyi bilmelisiniz: **Sitenin arka kapıları (Recon)** ve **Uygulamanın mantığı (Logic).**
+Geçtiğimiz 5 hafta boyunca siber güvenliğin farklı yapıtaşlarını inceledik. Wireshark ile paketlerin arasına daldık, Linux'ta terminalin gücünü keşfettik ve Burp Suite ile web mantığını manipüle ettik. Ancak siber uzayda hiçbir şey bağımsız değildir. Gerçek bir uzman, ağı, işletim sistemini ve web'i tek bir satranç tahtası gibi görebilmelidir.
 
-Bu hafta iki ana cephede savaşıyoruz:
+Önünüzde 10 günlük geniş bir süre var. Bu final projesi iki ana fazdan oluşmaktadır. Önce laboratuvar ortamında teknik derinliğinizi kanıtlayacak, ardından sahaya inip gerçek bir avcı gibi iz süreceksiniz. 
 
-#### 🕵️‍♂️ 1. Cephe: Hayalet Avı (Reconnaissance)
-Saldırganlar ana sayfadaki "İletişim" formuna saldırmazlar. Yazılımcıların unuttuğu, test ortamında kalmış alt alan adlarını (subdomain) ve gizli dizinleri bulurlar.
-* **Hedef:** Saldırı yüzeyini haritalandırmak (Attack Surface Mapping).
-* **Kritik Araçlar:** `subfinder`, `amass`, `httpx`, `dirsearch`.
+Bu final operasyonunda iki ana cephede savaşıyoruz:
 
-#### 🔓 2. Cephe: Yetkiyi Delmek (IDOR & BAC)
-Sitede kendi profilinizi görüntülerken, URL'deki `id=101` değerini `id=102` yaptığınızda patronun maaş bordrosunu görebiliyorsanız, sistemi kırmışsınız demektir.
-* **Hedef:** "Başkası gibi" işlem yapmak.
-* **Kritik Kavramlar:** IDOR (Insecure Direct Object Reference), Broken Access Control, Cookie/Session manipülasyonu ve **Burp Suite**.
+#### ⚔️ FAZ 1: "Siber Triatlon" (Teknik Derinlik ve Analiz)
+Sadece web açığı arayan biri, o açığın arka planda nasıl bir sistem yetkisine dönüştüğünü veya ağda nasıl bir iz bıraktığını bilemez. Bu fazda konfor alanınızdan çıkıp 3 farklı teknik cephede savaşacaksınız.
+* **Hedef:** İşletim sistemleri (Linux/Bash), Web Sunucusu Mantığı (Server-Side) ve Ağ Adli Analizi (PCAP) konularında ustalaşmak.
+* **Kritik Kavramlar:** SSH Key yönetimi, Command Injection, LFI, Wireshark Filtreleri ve Zararlı Yazılım (Malware) Trafik Analizi.
+* **Saha:** *OverTheWire (Bandit & Natas)* ve *TryHackMe (C2 Carnage)*.
 
+#### 🕵️‍♂️ FAZ 2: "Saha Operasyonu" (Web Recon & VDP Raporlama)
+Laboratuvarda bayrak (flag) yakalamak eğlencelidir, ancak sektörde size para ve itibar kazandıran şey; gerçek bir şirketteki açığı bulmak ve bunu profesyonelce raporlamaktır.
+* **Hedef:** Gerçek bir VDP (Vulnerability Disclosure Program) üzerinde saldırı yüzeyini çıkartmak ve zafiyet aramak.
+* **Kritik Kavramlar:** Attack Surface Mapping, Subdomain/Directory Fuzzing, Zafiyet Sömürüsü (PoC), CVSS Skorlama ve Yönetici Özeti Hazırlama.
 
-
-> **💡 Vizyon:** Amacımız ekrana `alert(1)` yazdırmak değil; uygulamanın çalışma mantığındaki açıkları bularak başkasının verisine (veya yetkisine) ulaşmaktır.
+> **💡 Vizyon:** Amacımız sadece ekranda rastgele komutlar çalıştırmak değil; bir hedefe sistematik olarak yaklaşmak, bulgularımızı analiz etmek ve bunu bir şirketin CEO'suna dahi sunabileceğimiz **"Milyonluk bir rapora"** dönüştürmektir.
 
 ---
 
